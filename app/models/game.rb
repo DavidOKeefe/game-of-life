@@ -5,7 +5,12 @@ class Game < ApplicationRecord
            inverse_of: :game,
            dependent:  :destroy
 
+  belongs_to :user, inverse_of: :games
+
   validates :name,
             presence:   true,
-            uniqueness: true
+            uniqueness: { scope: :user }
+
+  validates :user,
+            presence: true
 end
