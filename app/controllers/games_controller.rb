@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.where(user: current_user)
   end
 end
