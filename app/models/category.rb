@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
 class Category < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
+  NAMES = {
+    hard:   'hard',
+    medium: 'medium',
+    easy:   'easy'
+  }
+
+  validates :name,
+            presence:   true,
+            uniqueness: true
 end
