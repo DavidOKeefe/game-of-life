@@ -1,9 +1,6 @@
-.byebug_history
-.cache
-.env
-.gemrc
-.idea
-.DS_Store
-
-*.aes
-*.zip
+/log/*
+/log/
+*.log
+/tmp/
+!/log/.keep
+!/tmp/.keep
